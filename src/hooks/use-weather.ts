@@ -3,6 +3,7 @@ import { WeatherHistoryStorage } from '@/storages/weather-history-storage';
 import type { SearchHistoryItem } from '@/types/search-history-item';
 import type { WeatherData } from '@/types/weather-data';
 import { useState } from 'react';
+import { toast } from 'sonner';
 import useSWR from 'swr';
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY as string;
@@ -10,8 +11,11 @@ const BASE_URL = 'https://api.weatherapi.com/v1/current.json';
 
 const fetcher = async (url: string): Promise<WeatherData> => {
 	const res = await fetch(url);
-	if (!res.ok) throw new Error('Failed to fetch weather data');
 	const data = await res.json();
+
+	if (data.error || !res.ok) {
+		throw new Error(data.error?.message || 'Failed to fetch weather data');
+	}
 
 	return {
 		city: data.location.name,
@@ -57,7 +61,15 @@ export function useWeather() {
 		{
 			revalidateOnFocus: false,
 			revalidateOnReconnect: false,
-			onSuccess: updateHistory
+			shouldRetryOnError: false,
+			onSuccess: updateHistory,
+			onError: (error) => {
+				if (error instanceof Error && error.message) {
+					toast.error(`Failed to fetch weather data. ${error}`);
+					return;
+				}
+				toast.error('Failed to fetch weather data. Please try again.');
+			}
 		}
 	);
 

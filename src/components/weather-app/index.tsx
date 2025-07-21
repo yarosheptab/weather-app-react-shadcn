@@ -11,7 +11,6 @@ export default function WeatherApp() {
 	const {
 		weatherData,
 		isLoading,
-		error,
 		search,
 		searchHistory,
 		removeHistoryItem,
@@ -50,10 +49,6 @@ export default function WeatherApp() {
 			)
 		});
 	};
-
-	if (error) {
-		toast.error('Failed to fetch weather data. Please try again.');
-	}
 
 	return (
 		<div className="min-h-screen flex items-center justify-center">
