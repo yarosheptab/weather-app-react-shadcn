@@ -6,11 +6,11 @@
 		"lib": ["ES2022", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"skipLibCheck": true,
+		"types": ["jest", "@testing-library/jest-dom", "node"],
 
 		/* Bundler mode */
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
-		"verbatimModuleSyntax": true,
 		"moduleDetection": "force",
 		"noEmit": true,
 		"jsx": "react-jsx",
