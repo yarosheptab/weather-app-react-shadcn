@@ -1,3 +1,4 @@
+import { getWeatherApiKey } from '@/lib/get-weather-api-key';
 import { mapWeatherIcon } from '@/lib/utils';
 import { WeatherHistoryStorage } from '@/storages/weather-history-storage';
 import type { SearchHistoryItem } from '@/types/search-history-item';
@@ -6,7 +7,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import useSWR from 'swr';
 
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY as string;
+const API_KEY = getWeatherApiKey();
 const BASE_URL = 'https://api.weatherapi.com/v1/current.json';
 
 const fetcher = async (url: string): Promise<WeatherData> => {
