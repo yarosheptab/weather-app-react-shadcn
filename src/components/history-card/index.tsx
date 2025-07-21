@@ -32,10 +32,10 @@ export const HistoryCard = ({
 					<div className="space-y-2">
 						{searchHistory.map((item) => (
 							<div key={item.id}>
-								<div className="flex items-center justify-between p-3 hover:bg-background/40 border rounded-lg transition-colors">
+								<div className="flex items-center justify-between p-3 hover:bg-background/40 border rounded-lg transition-colors cursor-pointer">
 									<button
 										onClick={() => handleHistoryClick(item.city)}
-										className="flex-1 text-left"
+										className="flex-1 text-left cursor-pointer"
 									>
 										<div className="font-medium">{item.city}</div>
 										<div className="text-sm text-gray-500">
