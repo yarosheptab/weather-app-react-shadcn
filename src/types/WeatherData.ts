@@ -7,5 +7,7 @@ export interface WeatherData {
 	maxTemp: number;
 	windSpeed: number;
 	humidity: number;
-	icon: string;
+	icon: WeatherType;
 }
+
+export type WeatherType = 'sun' | 'rain' | 'snow' | 'cloud';
