@@ -1,7 +1,7 @@
 import { mapWeatherIcon } from '@/lib/utils';
-import { WeatherHistoryStorage } from '@/storages/WeatherHistoryStorage';
-import type { SearchHistoryItem } from '@/types/SearchHistoryItem';
-import type { WeatherData } from '@/types/WeatherData';
+import { WeatherHistoryStorage } from '@/storages/weather-history-storage';
+import type { SearchHistoryItem } from '@/types/search-history-item';
+import type { WeatherData } from '@/types/weather-data';
 import { useState } from 'react';
 import useSWR from 'swr';
 

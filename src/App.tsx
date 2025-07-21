@@ -1,5 +1,5 @@
-import WeatherApp from '@/components/pages/main-page';
 import { Toaster } from '@/components/ui/sonner';
+import WeatherApp from '@/components/weather-app';
 import { ThemeProvider } from '@/providers/theme-provider';
 
 function App() {

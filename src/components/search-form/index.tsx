@@ -20,9 +20,9 @@ export const SearchForm = ({
 	};
 
 	return (
-		<Card>
+		<Card className="gap-2">
 			<CardHeader>
-				<CardTitle className="flex items-center gap-2">
+				<CardTitle className="flex items-center gap-1">
 					<Search className="w-5 h-5" />
 					Search Weather
 				</CardTitle>

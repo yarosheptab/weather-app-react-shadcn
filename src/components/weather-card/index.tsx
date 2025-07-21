@@ -6,7 +6,7 @@ import {
 	CardTitle
 } from '@/components/ui/card';
 import { WeatherIcon } from '@/components/ui/weather-icon';
-import type { WeatherData } from '@/types/WeatherData';
+import type { WeatherData } from '@/types/weather-data';
 import { Cloud, Thermometer, Wind } from 'lucide-react';
 import { Skeleton } from '../ui/skeleton';
 

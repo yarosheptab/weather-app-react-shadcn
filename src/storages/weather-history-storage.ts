@@ -1,4 +1,4 @@
-import type { SearchHistoryItem } from '@/types/SearchHistoryItem';
+import type { SearchHistoryItem } from '@/types/search-history-item';
 
 const STORAGE_KEY = 'weatherHistory';
 

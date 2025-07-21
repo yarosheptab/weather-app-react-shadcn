@@ -1,4 +1,4 @@
-import type { WeatherType } from '@/types/WeatherData';
+import type { WeatherType } from '@/types/weather-data';
 import { Cloud, CloudRain, Snowflake, Sun } from 'lucide-react';
 
 export const WeatherIcon = ({

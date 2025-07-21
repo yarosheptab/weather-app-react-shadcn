@@ -3,7 +3,7 @@ import { HistoryCard } from '@/components/history-card';
 import { SearchForm } from '@/components/search-form';
 import { Button } from '@/components/ui/button';
 import { WeatherCard } from '@/components/weather-card';
-import { useWeather } from '@/hooks/useWeather';
+import { useWeather } from '@/hooks/use-weather';
 import { Undo2 } from 'lucide-react';
 import { toast } from 'sonner';
 

@@ -1,4 +1,4 @@
-import type { WeatherType } from '@/types/WeatherData';
+import type { WeatherType } from '@/types/weather-data';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 

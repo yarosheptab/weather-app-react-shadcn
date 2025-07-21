@@ -6,7 +6,7 @@ import {
 	CardHeader,
 	CardTitle
 } from '@/components/ui/card';
-import type { SearchHistoryItem } from '@/types/SearchHistoryItem';
+import type { SearchHistoryItem } from '@/types/search-history-item';
 import { History, X } from 'lucide-react';
 
 export const HistoryCard = ({
